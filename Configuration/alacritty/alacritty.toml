@@ -1,0 +1,28 @@
+# Alacritty.
+
+import = [
+   "~/.config/alacritty/rose-pine.toml",
+]
+
+live_config_reload = true
+ipc_socket = false
+
+[window]
+padding = { x = 7, y = 7 }
+dynamic_padding = true
+
+[scrolling]
+history = 0
+
+[font]
+normal = { family = "IosevkaTermSlab Nerd Font Mono", style = "Regular" }
+size = 22
+
+[cursor]
+style = { shape = "Underline", blinking = "On" }
+blink_interval = 350
+thickness = 0.35
+
+[[keyboard.bindings]]
+key = "F11"
+action = "ToggleFullscreen"
