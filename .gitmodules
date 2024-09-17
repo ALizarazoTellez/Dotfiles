@@ -2,3 +2,6 @@
 	path = Submodule/dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
+[submodule "Submodule/Neovim"]
+	path = Submodule/Neovim
+	url = https://github.com/ALizarazoTellez/Neovim

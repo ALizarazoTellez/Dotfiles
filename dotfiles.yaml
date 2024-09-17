@@ -12,6 +12,7 @@
 
 - link:
     ~/.config/alacritty: Configuration/alacritty
+    ~/.config/nvim: Submodule/Neovim
 
 - create:
   - ~/Documents/Code
