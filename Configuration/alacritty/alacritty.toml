@@ -23,6 +23,9 @@ style = { shape = "Underline", blinking = "On" }
 blink_interval = 350
 thickness = 0.35
 
+[mouse]
+hide_when_typing = true
+
 [[keyboard.bindings]]
 key = "F11"
 action = "ToggleFullscreen"
