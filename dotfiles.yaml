@@ -12,6 +12,7 @@
 
 - link:
     ~/.config/alacritty: Configuration/alacritty
+    ~/.config/fish: Configuration/fish
     ~/.config/nvim: Submodule/Neovim
 
 - create:
