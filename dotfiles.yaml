@@ -13,6 +13,7 @@
 - link:
     ~/.config/alacritty: Configuration/alacritty
     ~/.config/fish: Configuration/fish
+    ~/.config/hypr: Configuration/hypr
     ~/.config/nvim: Submodule/Neovim
 
 - create:
