@@ -12,7 +12,7 @@ padding = { x = 7, y = 7 }
 dynamic_padding = true
 
 [scrolling]
-history = 0
+history = 1000
 
 [font]
 normal = { family = "IosevkaTermSlab Nerd Font Mono", style = "Regular" }
