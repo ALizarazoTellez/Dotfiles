@@ -1,7 +1,6 @@
 ; Copyright (C) 2024, Anderson Lizarazo Tellez.
 
-(defpoll volume-label :interval "1s" `./support volume -s`)
-(defpoll battery-label :interval "1s" `./support battery -s`)
+(defpoll battery-label :interval "1s" `./support styled battery`)
 
 (defwindow preview-top
    :monitor 0
