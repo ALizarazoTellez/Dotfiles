@@ -1,0 +1,19 @@
+; Copyright (C) 2024, Anderson Lizarazo Tellez.
+
+(defpoll volume-label :interval "1s" `./support volume -s`)
+(defpoll battery-label :interval "1s" `./support battery -s`)
+
+(defwindow preview-top
+   :monitor 0
+
+   :geometry (geometry :x "50%"
+                       :y "10%"
+                       :width "100px"
+                       :height "100px"
+                       :anchor "top center")
+   :stacking "overlay"
+      (box :orientation "vertical" :class "PreviewTop"
+         (label :text "${formattime(EWW_TIME, "%H:%M")}" :class "PreviewTop-Hour")
+         (label :text battery-label :class "PreviewTop-Battery")
+   )
+)
