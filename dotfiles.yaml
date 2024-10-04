@@ -14,6 +14,7 @@
     ~/.config/alacritty: Configuration/alacritty
     ~/.config/eww: Configuration/eww
     ~/.config/fish: Configuration/fish
+    ~/.config/fuzzel: Configuration/fuzzel
     ~/.config/hypr: Configuration/hypr
     ~/.config/nvim: Submodule/Neovim
 
