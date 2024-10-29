@@ -16,6 +16,7 @@
     ~/.config/fish: Configuration/fish
     ~/.config/fuzzel: Configuration/fuzzel
     ~/.config/hypr: Configuration/hypr
+    ~/.config/mimeapps.list: Configuration/mimeapps.list
     ~/.config/nvim: Submodule/Neovim
 
 - create:

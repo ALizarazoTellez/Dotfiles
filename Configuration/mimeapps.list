@@ -1,0 +1,10 @@
+[Default Applications]
+image/png=vimiv.desktop;
+image/jpeg=vimiv.desktop;
+video/mp4=mpv.desktop;
+text/plain=nvim.desktop;
+text/x-python=nvim.desktop;
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
+text/x-go=nvim.desktop;
+audio/mpeg=mpv.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=org.onlyoffice.desktopeditors.desktop;
