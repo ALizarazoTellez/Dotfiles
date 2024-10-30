@@ -1,0 +1,53 @@
+@define-color base_color rgb(25, 23, 36);
+@define-color text_color rgb(224, 222, 244);
+@define-color overlay_color rgb(38, 35, 58);
+@define-color pine_color rgb(49, 116, 143);
+@define-color iris_color rgb(196, 167, 231);
+
+window.Bar {
+  background: @base_color;
+  color: @text_color;
+}
+
+window.Bar centerbox {
+  padding: 10px;
+}
+
+window.Bar .Workspaces button {
+  all: unset;
+  padding: 7px 10px;
+  margin-right: 5px;
+  background: @base_color;
+  color: @text_color;
+  border: 3px solid @pine_color;
+  border-radius: 7px;
+}
+
+window.Bar .Workspaces button:hover {
+  background: @pine_color;
+  transition: background 0.2s ease;
+}
+
+window.Bar .Workspaces button:active {
+  font-weight: bold;
+}
+
+window.Bar .Time {
+  font-weight: bold;
+  font-size: 26px;
+}
+
+window.Bar .SysTray-item {
+  all: unset;
+
+  all: unset;
+  padding: 7px 10px;
+  margin-left: 5px;
+  background: @base_color;
+  border: 3px solid @iris_color;
+  border-radius: 7px;
+}
+
+window.Bar .Battery {
+  margin-left: 10px;
+}
