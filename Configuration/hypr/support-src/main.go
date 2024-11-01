@@ -1,24 +1,24 @@
 package main
 
 import (
+	"fmt"
 	"os/exec"
+	"strings"
 )
 
 func main() {
-	RegisterHandler("createworkspace", func(workspace string) error {
-		if workspace != "special:scratchpad" {
-			return nil
+	RegisterHandler("activespecial", func(s string) error {
+		data := strings.Split(s, ",")
+		if len(data) != 2 {
+			panic(fmt.Sprintf("Invalid layout: %#v", data))
 		}
 
-		if err := exec.Command("ags", "-m", "show bar").Run(); err != nil {
-			return err
-		}
+		// Data{Workspace, Monitor}.
+		if data[0] == "special:scratchpad" {
+			if err := exec.Command("ags", "-m", "show bar").Run(); err != nil {
+				return err
+			}
 
-		return nil
-	})
-
-	RegisterHandler("destroyworkspace", func(workspace string) error {
-		if workspace != "special:scratchpad" {
 			return nil
 		}
 
