@@ -14,3 +14,5 @@ x-scheme-handler/about=zen.desktop
 x-scheme-handler/unknown=zen.desktop
 text/csv=nvim.desktop;
 text/html=nvim.desktop;
+inode/directory=nemo.desktop
+application/x-gnome-saved-search=nemo.desktop
