@@ -1,10 +1,13 @@
-# User environment variables.
+# Load environment variables from SystemD.
+# User environment variables can be set on `~/.config/environment.d`.
 
-set PATH $PATH ~/.local/bin
+set -l GENERATOR /usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator
 
-# Go.
-set --export GOPATH ~/.local/share/go
-set PATH $PATH $GOPATH/bin
+for var in ($GENERATOR)
+    set -l tokens (string split --max 1 '=' "$var")
 
-# Rust.
-set PATH $PATH ~/.cargo/bin
+    set -l name "$tokens[1]"
+    set -l value "$tokens[2]"
+
+    set --export "$name" "$value"
+end
