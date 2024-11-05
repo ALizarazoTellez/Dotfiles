@@ -10,6 +10,7 @@ export default function Bar(monitor: number) {
       application={App}
       className="Bar"
       monitor={monitor}
+      layer={Astal.Layer.OVERLAY}
       anchor={
         Astal.WindowAnchor.TOP |
         Astal.WindowAnchor.LEFT |
