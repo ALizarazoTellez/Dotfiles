@@ -1,0 +1,14 @@
+[Unit]
+Description=Inhibit idle service when playing music
+After=hypridle.service
+
+[Service]
+Type=exec
+# Repurpose XDG Autostart filtering.
+ExecCondition=/lib/systemd/systemd-xdg-autostart-condition "Hyprland" ""
+ExecStart=wayland-pipewire-idle-inhibit
+Restart=on-failure
+Slice=background-graphical.slice
+
+[Install]
+WantedBy=hypridle.service

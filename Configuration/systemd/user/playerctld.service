@@ -1,0 +1,12 @@
+[Unit]
+Description=Playerctl daemon
+After=graphical-session.target
+
+[Service]
+Type=exec
+ExecStart=playerctld
+Restart=on-failure
+Slice=background-graphical.slice
+
+[Install]
+WantedBy=graphical-session.target

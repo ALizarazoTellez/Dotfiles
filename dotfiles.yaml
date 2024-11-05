@@ -19,9 +19,14 @@
     ~/.config/hypr: Configuration/hypr
     ~/.config/mimeapps.list: Configuration/mimeapps.list
     ~/.config/nvim: Submodule/Neovim
+    ~/.config/systemd: Configuration/systemd
 
 - create:
   - ~/Documents/Code
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - [systemctl --user daemon-reload, Reloading SystemD]
+    - [systemctl --user enable fumon.service, Enabling crash report service]
+    - [systemctl --user enable hyprpolkitagent.service, Enabling crash report service]
+    - ['for unit in ~/.config/systemd/user/*.service; systemctl --user enable (path basename "$unit"); end', Enabling user services]
