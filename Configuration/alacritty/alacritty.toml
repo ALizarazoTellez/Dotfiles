@@ -1,5 +1,6 @@
 # Alacritty.
 
+[general]
 import = [
    "~/.config/alacritty/rose-pine.toml",
 ]
