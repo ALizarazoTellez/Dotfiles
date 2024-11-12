@@ -20,6 +20,7 @@
     ~/.config/mimeapps.list: Configuration/mimeapps.list
     ~/.config/nvim: Submodule/Neovim
     ~/.config/systemd: Configuration/systemd
+    ~/.config/zellij: Configuration/zellij
 
 - create:
   - ~/Documents/Code

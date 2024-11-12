@@ -1,0 +1,52 @@
+// Copyright (C) 2024, Anderson Lizarazo Tellez.
+
+keybinds clear-defaults=true {
+   locked {
+      bind "Ctrl a" { SwitchToMode "normal"; }
+   }
+
+   normal {
+      bind "d" { Detach; }
+
+      bind "c" { NewTab; SwitchToMode "locked"; }
+      bind "q" { CloseTab; SwitchToMode "locked"; } 
+      bind "n" { GoToNextTab; SwitchToMode "locked"; } 
+      bind "p" { GoToPreviousTab; SwitchToMode "locked"; } 
+
+      bind "1" { GoToTab 1; SwitchToMode "locked"; } 
+      bind "2" { GoToTab 2; SwitchToMode "locked"; } 
+      bind "3" { GoToTab 3; SwitchToMode "locked"; } 
+
+      bind "Enter" { NewPane; SwitchToMode "locked"; }
+      bind "+" { Resize "Increase"; SwitchToMode "locked"; }
+      bind "-" { Resize "Decrease"; SwitchToMode "locked"; }
+      bind "w" { FocusNextPane; SwitchToMode "locked"; }
+      bind "x" { CloseFocus; SwitchToMode "locked"; }
+   }
+}
+
+plugins {
+   compact-bar location="zellij:compact-bar"
+      configuration location="zellij:configuration"
+      filepicker location="zellij:strider" {
+         cwd "/"
+      }
+   plugin-manager location="zellij:plugin-manager"
+      session-manager location="zellij:session-manager"
+      status-bar location="zellij:status-bar"
+      strider location="zellij:strider"
+      tab-bar location="zellij:tab-bar"
+      welcome-screen location="zellij:session-manager" {
+         welcome_screen true
+      }
+}
+
+theme "rose-pine"
+
+default_mode "locked"
+default_layout "default"
+
+pane_frames false
+
+session_name "Default"
+attach_to_session true
