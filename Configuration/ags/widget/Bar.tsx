@@ -31,18 +31,18 @@ export default function Bar(monitor: number) {
 }
 
 function Workspaces() {
-  const hypr = Hyprland.get_default();
+  const hyprland = Hyprland.get_default();
 
   return (
     <box className="Workspaces">
-      {bind(hypr, "workspaces").as((wss) =>
-        wss
+      {bind(hyprland, "workspaces").as((workspace) =>
+        workspace
           .sort((a, b) => a.id - b.id)
           .filter((ws) => ws.id > 0)
           .map((ws) => (
             <button
-              className={bind(hypr, "focusedWorkspace").as((fw) =>
-                ws === fw ? "focused" : "",
+              className={bind(hyprland, "focusedWorkspace").as((focusedWs) =>
+                ws === focusedWs ? "focused" : "",
               )}
               onClicked={() => ws.focus()}
             >

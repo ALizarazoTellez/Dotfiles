@@ -21,11 +21,16 @@ window.Bar .Workspaces button {
   color: @text_color;
   border: 3px solid @pine_color;
   border-radius: 7px;
+  transition: background 0.2s ease;
+}
+
+window.Bar .Workspaces .focused {
+  background: @pine_color;
+  font-weight: bold;
 }
 
 window.Bar .Workspaces button:hover {
   background: @pine_color;
-  transition: background 0.2s ease;
 }
 
 window.Bar .Workspaces button:active {
