@@ -1,4 +1,5 @@
 import { App, Variable, Astal, Gtk, Gdk, GLib, bind } from "astal";
+
 import Tray from "gi://AstalTray";
 import Hyprland from "gi://AstalHyprland";
 import Battery from "gi://AstalBattery";
@@ -53,14 +54,24 @@ function Workspaces() {
   );
 }
 
-function Time({ format = "%H:%M" }) {
+function Time() {
   const time = Variable<string>("").poll(
     1000,
-    () => GLib.DateTime.new_now_local().format(format)!,
+    () => GLib.DateTime.new_now_local().format("%H:%M")!,
+  );
+
+  const date = Variable<string>("").poll(
+    1000 * 60 * 60, // Poll every hour.
+    () => GLib.DateTime.new_now_local().format("%A, %B %d, %Y")!,
   );
 
   return (
-    <label className="Time" onDestroy={() => time.drop()} label={time()} />
+    <label
+      className="Time"
+      onDestroy={() => time.drop()}
+      label={time()}
+      tooltipText={date()}
+    />
   );
 }
 
