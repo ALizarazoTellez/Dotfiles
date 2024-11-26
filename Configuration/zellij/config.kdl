@@ -6,6 +6,10 @@ keybinds clear-defaults=true {
    }
 
    normal {
+      bind "Esc" { SwitchToMode "locked"; }
+
+      bind "s" { EditScrollback; SwitchToMode "locked"; }
+
       bind "d" { Detach; }
 
       bind "c" { NewTab; SwitchToMode "locked"; }
