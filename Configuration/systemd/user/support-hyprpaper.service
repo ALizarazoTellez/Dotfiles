@@ -1,0 +1,14 @@
+[Unit]
+Description=Support program for Hyprpaer (execute after Hyprpaper).
+Documentation=man:hyprpaper(1)
+After=hyprpaper.service
+
+[Service]
+Type=exec
+# TODO: Fix path (don't hardcode user name).
+ExecStart=/home/anderson/.config/hypr/support wallpaper-service
+Restart=on-failure
+Slice=background-graphical.slice
+
+[Install]
+WantedBy=hyprpaper.service
