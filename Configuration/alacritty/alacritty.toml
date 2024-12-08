@@ -11,6 +11,7 @@ ipc_socket = false
 [window]
 padding = { x = 7, y = 7 }
 dynamic_padding = true
+opacity = 0.9
 
 [scrolling]
 history = 1000
