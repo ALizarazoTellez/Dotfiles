@@ -13,13 +13,15 @@ keybinds clear-defaults=true {
       bind "d" { Detach; }
 
       bind "c" { NewTab; SwitchToMode "locked"; }
-      bind "q" { CloseTab; SwitchToMode "locked"; } 
-      bind "n" { GoToNextTab; SwitchToMode "locked"; } 
-      bind "p" { GoToPreviousTab; SwitchToMode "locked"; } 
+      bind "q" { CloseTab; SwitchToMode "locked"; }
+      bind "n" { GoToNextTab; SwitchToMode "locked"; }
+      bind "p" { GoToPreviousTab; SwitchToMode "locked"; }
 
-      bind "1" { GoToTab 1; SwitchToMode "locked"; } 
-      bind "2" { GoToTab 2; SwitchToMode "locked"; } 
-      bind "3" { GoToTab 3; SwitchToMode "locked"; } 
+      bind "1" { GoToTab 1; SwitchToMode "locked"; }
+      bind "2" { GoToTab 2; SwitchToMode "locked"; }
+      bind "3" { GoToTab 3; SwitchToMode "locked"; }
+      bind "4" { GoToTab 4; SwitchToMode "locked"; }
+      bind "5" { GoToTab 5; SwitchToMode "locked"; }
 
       bind "Enter" { NewPane; SwitchToMode "locked"; }
       bind "+" { Resize "Increase"; SwitchToMode "locked"; }
