@@ -1,4 +1,5 @@
-import { App, Variable, Astal, Gtk, Gdk, GLib, bind } from "astal";
+import { App, Astal, Gtk, Gdk } from "astal/gtk3";
+import { GLib, Variable, bind } from "astal";
 
 import Tray from "gi://AstalTray";
 import Hyprland from "gi://AstalHyprland";

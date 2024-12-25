@@ -90,14 +90,14 @@ func registerHandlers() {
 
 		// Data{Workspace, Monitor}.
 		if data[0] == "special:scratchpad" {
-			if err := exec.Command("ags", "-m", "show bar").Run(); err != nil {
+			if err := exec.Command("ags", "request", "show bar").Run(); err != nil {
 				return err
 			}
 
 			return nil
 		}
 
-		if err := exec.Command("ags", "-m", "hide bar").Run(); err != nil {
+		if err := exec.Command("ags", "request", "hide bar").Run(); err != nil {
 			return err
 		}
 

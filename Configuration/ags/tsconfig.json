@@ -10,10 +10,10 @@
     "checkJs": true,
     "allowJs": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "/usr/local/share/astal/gjs/src/jsx",
+    "jsxImportSource": "/usr/share/astal/gjs/src/jsx",
     "paths": {
-      "astal": ["/usr/local/share/astal/gjs"],
-      "astal/*": ["/usr/local/share/astal/gjs/src/*"]
+      "astal": ["/usr/share/astal/gjs"],
+      "astal/*": ["/usr/share/astal/gjs/src/*"]
     }
   }
 }

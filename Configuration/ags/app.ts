@@ -1,4 +1,4 @@
-import { App, Gtk } from "astal";
+import { App, Gtk } from "astal/gtk3";
 import style from "inline:./style.css";
 import Bar from "./widget/Bar";
 
