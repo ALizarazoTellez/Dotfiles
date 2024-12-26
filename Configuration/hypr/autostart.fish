@@ -1,5 +1,6 @@
 #!/usr/bin/env fish
 
+~/.config/hypr/theme.sh
 ags run &
 poweralertd &
 hypridle &
