@@ -8,12 +8,13 @@ keybinds clear-defaults=true {
    normal {
       bind "Esc" { SwitchToMode "locked"; }
 
-      bind "s" { EditScrollback; SwitchToMode "locked"; }
+      bind "e" { EditScrollback; SwitchToMode "locked"; }
+      bind "s" { SwitchToMode "scroll"; }
 
       bind "d" { Detach; }
+      bind "q" { Quit; }
 
       bind "c" { NewTab; SwitchToMode "locked"; }
-      bind "q" { CloseTab; SwitchToMode "locked"; }
       bind "n" { GoToNextTab; SwitchToMode "locked"; }
       bind "p" { GoToPreviousTab; SwitchToMode "locked"; }
 
@@ -28,6 +29,21 @@ keybinds clear-defaults=true {
       bind "-" { Resize "Decrease"; SwitchToMode "locked"; }
       bind "w" { FocusNextPane; SwitchToMode "locked"; }
       bind "x" { CloseFocus; SwitchToMode "locked"; }
+
+      bind "Space" {
+         LaunchOrFocusPlugin "session-manager" {
+            floating true
+               move_to_focused_tab true
+         };
+         SwitchToMode "locked";
+      }
+   }
+
+   scroll {
+      bind "Esc" { SwitchToMode "locked"; }
+      bind "j" "Down" { ScrollDown; }
+      bind "k" "Up" { ScrollUp; }
+      bind "c" { Copy; }
    }
 }
 
@@ -53,6 +69,3 @@ default_mode "locked"
 default_layout "default"
 
 pane_frames false
-
-session_name "Default"
-attach_to_session true
