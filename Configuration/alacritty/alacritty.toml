@@ -5,16 +5,16 @@ import = [
    "~/.config/alacritty/rose-pine.toml",
 ]
 
-live_config_reload = true
+live_config_reload = false
 ipc_socket = false
 
 [window]
-padding = { x = 7, y = 7 }
+padding = { x = 3, y = 0 }
 dynamic_padding = true
 opacity = 0.9
 
 [scrolling]
-history = 1000
+history = 0
 
 [font]
 normal = { family = "IosevkaTermSlab Nerd Font Mono", style = "Regular" }
