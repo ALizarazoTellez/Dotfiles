@@ -9,7 +9,10 @@ keybinds clear-defaults=true {
       bind "Esc" { SwitchToMode "locked"; }
 
       bind "e" { EditScrollback; SwitchToMode "locked"; }
-      bind "s" { SwitchToMode "scroll"; }
+
+      // Scrolling.
+      bind "j" "Down" { ScrollDown; }
+      bind "k" "Up" { ScrollUp; }
 
       bind "d" { Detach; }
       bind "q" { Quit; }
@@ -37,13 +40,6 @@ keybinds clear-defaults=true {
          };
          SwitchToMode "locked";
       }
-   }
-
-   scroll {
-      bind "Esc" { SwitchToMode "locked"; }
-      bind "j" "Down" { ScrollDown; }
-      bind "k" "Up" { ScrollUp; }
-      bind "c" { Copy; }
    }
 }
 
