@@ -15,6 +15,7 @@
     ~/.config/alacritty: Configuration/alacritty
     ~/.config/environment.d: Configuration/environment.d
     ~/.config/fish: Configuration/fish
+    ~/.config/foot: Configuration/foot
     ~/.config/fuzzel: Configuration/fuzzel
     ~/.config/hypr: Configuration/hypr
     ~/.config/mimeapps.list: Configuration/mimeapps.list
