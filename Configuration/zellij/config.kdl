@@ -65,3 +65,6 @@ default_mode "locked"
 default_layout "default"
 
 pane_frames false
+
+// Session resurrection is very buggy (at least for me).
+session_serialization false
