@@ -64,6 +64,13 @@ theme "rose-pine"
 default_mode "locked"
 default_layout "default"
 
+ui {
+    pane_frames {
+        rounded_corners true
+        hide_session_name true
+    }
+}
+
 pane_frames false
 
 // Session resurrection is very buggy (at least for me).
