@@ -12,7 +12,6 @@
 
 - link:
     ~/.config/ags: Configuration/ags
-    ~/.config/alacritty: Configuration/alacritty
     ~/.config/environment.d: Configuration/environment.d
     ~/.config/fish: Configuration/fish
     ~/.config/foot: Configuration/foot
