@@ -28,8 +28,8 @@ keybinds clear-defaults=true {
       bind "5" { GoToTab 5; SwitchToMode "locked"; }
 
       bind "Enter" { NewPane; SwitchToMode "locked"; }
-      bind "+" { Resize "Increase"; SwitchToMode "locked"; }
-      bind "-" { Resize "Decrease"; SwitchToMode "locked"; }
+      bind "+" { Resize "Increase"; }
+      bind "-" { Resize "Decrease"; }
       bind "w" { FocusNextPane; SwitchToMode "locked"; }
       bind "x" { CloseFocus; SwitchToMode "locked"; }
 
