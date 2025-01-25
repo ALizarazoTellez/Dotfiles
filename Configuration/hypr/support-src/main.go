@@ -89,7 +89,7 @@ func registerHandlers() {
 		}
 
 		// Data{Workspace, Monitor}.
-		if data[0] == "special:scratchpad" {
+		if data[0] == "special:Scratchpad" {
 			if err := exec.Command("ags", "request", "show bar").Run(); err != nil {
 				return err
 			}
