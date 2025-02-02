@@ -1,5 +1,10 @@
 import { App } from "astal/gtk3";
 
+import { Bar } from "./bar.js";
+
 App.start({
-  main() {},
+  instanceName: "top-bar",
+  main() {
+    Bar(0);
+  },
 });
