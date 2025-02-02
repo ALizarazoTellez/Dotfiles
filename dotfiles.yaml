@@ -11,7 +11,7 @@
     recursive: true
 
 - link:
-    ~/.config/ags: Configuration/ags
+    ~/.config/astal: Configuration/astal
     ~/.config/environment.d: Configuration/environment.d
     ~/.config/fish: Configuration/fish
     ~/.config/foot: Configuration/foot
