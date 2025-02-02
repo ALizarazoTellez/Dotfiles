@@ -1,5 +1,7 @@
-import { Astal, Widget } from "astal/gtk3";
-import { Variable, GLib } from "astal";
+import { Astal, Widget, Gtk } from "astal/gtk3";
+import { Variable, GLib, bind } from "astal";
+
+import Tray from "gi://AstalTray";
 
 export function Bar(monitor) {
   const { TOP, LEFT, RIGHT } = Astal.WindowAnchor;
@@ -11,7 +13,7 @@ export function Bar(monitor) {
       {},
       new Widget.Label({ label: "Workspace Name" }),
       Time(),
-      new Widget.Label({ label: "Wifi, Battery & System Tray" }),
+      SystemStatus(),
     ),
   );
 }
@@ -27,4 +29,29 @@ function Time() {
       time.drop();
     },
   });
+}
+
+function SystemStatus() {
+  const tray = Tray.get_default();
+
+  return new Widget.Box(
+    { halign: Gtk.Align.END },
+    bind(tray, "items").as((items) =>
+      items.map(
+        (item) =>
+          new Widget.MenuButton(
+            {
+              tooltipMarkup: bind(item, "tooltipMarkup"),
+              usePopover: false,
+              actionGroup: bind(item, "actionGroup").as((ag) => [
+                "dbusmenu",
+                ag,
+              ]),
+              menuModel: bind(item, "menuModel"),
+            },
+            new Widget.Icon({ gicon: bind(item, "gicon") }),
+          ),
+      ),
+    ),
+  );
 }
