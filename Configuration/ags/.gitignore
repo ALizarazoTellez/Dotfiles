@@ -1,2 +1,6 @@
-@girs/
-node_modules/
+
+# Vendor.
+/node_modules/
+
+# Build artifacts.
+/astal.js
