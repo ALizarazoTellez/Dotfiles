@@ -1,4 +1,4 @@
-import { Astal, Widget, Gtk } from "astal/gtk3";
+import { Astal, App, Widget, Gtk } from "astal/gtk3";
 import { Variable, GLib, bind } from "astal";
 
 import Tray from "gi://AstalTray";
@@ -7,7 +7,12 @@ export function Bar(monitor) {
   const { TOP, LEFT, RIGHT } = Astal.WindowAnchor;
 
   return new Widget.Window(
-    { monitor: monitor, anchor: TOP | LEFT | RIGHT },
+    {
+      name: "StatusBar",
+      setup: (self) => App.add_window(self),
+      monitor: monitor,
+      anchor: TOP | LEFT | RIGHT,
+    },
 
     new Widget.CenterBox(
       {},

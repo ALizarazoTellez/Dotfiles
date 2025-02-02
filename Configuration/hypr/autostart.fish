@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 
 ~/.config/hypr/theme.sh
-ags run &
+gjs -m ~/.config/ags/astal.js
 poweralertd &
 hypridle &
 wayland-pipewire-idle-inhibit &
