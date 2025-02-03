@@ -1,6 +1,7 @@
 import { Astal, App, Widget, Gtk } from "astal/gtk3";
 import { Variable, GLib, bind } from "astal";
 
+import Hyprland from "gi://AstalHyprland";
 import Tray from "gi://AstalTray";
 import Battery from "gi://AstalBattery";
 
@@ -15,12 +16,16 @@ export function Bar(monitor) {
       anchor: TOP | LEFT | RIGHT,
     },
 
-    new Widget.CenterBox(
-      {},
-      new Widget.Label({ label: "Workspace Name" }),
-      Time(),
-      SystemStatus(),
-    ),
+    new Widget.CenterBox({}, Workspace(), Time(), SystemStatus()),
+  );
+}
+
+function Workspace() {
+  const hyprland = Hyprland.get_default();
+
+  return new Widget.Box(
+    {},
+    bind(hyprland, "focusedWorkspace").as((workspace) => workspace.name),
   );
 }
 
