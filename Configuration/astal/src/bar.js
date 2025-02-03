@@ -2,6 +2,7 @@ import { Astal, App, Widget, Gtk } from "astal/gtk3";
 import { Variable, GLib, bind } from "astal";
 
 import Tray from "gi://AstalTray";
+import Battery from "gi://AstalBattery";
 
 export function Bar(monitor) {
   const { TOP, LEFT, RIGHT } = Astal.WindowAnchor;
@@ -37,10 +38,18 @@ function Time() {
 }
 
 function SystemStatus() {
+  return new Widget.Box(
+    { halign: Gtk.Align.END },
+    SystemTray(),
+    BatteryStatus(),
+  );
+}
+
+function SystemTray() {
   const tray = Tray.get_default();
 
   return new Widget.Box(
-    { halign: Gtk.Align.END },
+    {},
     bind(tray, "items").as((items) =>
       items.map(
         (item) =>
@@ -58,5 +67,17 @@ function SystemStatus() {
           ),
       ),
     ),
+  );
+}
+
+function BatteryStatus() {
+  const battery = Battery.get_default();
+
+  return new Widget.Box(
+    {},
+    new Widget.Icon({ icon: bind(battery, "batteryIconName") }),
+    new Widget.Label({
+      label: bind(battery, "percentage").as((p) => ` ${Math.floor(p * 100)}%`),
+    }),
   );
 }
