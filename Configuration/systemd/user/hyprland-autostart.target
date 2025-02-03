@@ -1,0 +1,6 @@
+[Unit]
+Description=XDG autostart for Hyprland session
+Documentation=man:systemd.special(7) man:systemd-xdg-autostart-generator(8)
+BindsTo=xdg-desktop-autostart.target
+PartOf=hyprland-session.target
+After=hyprland-session.target
