@@ -1,6 +1,5 @@
 #!/usr/bin/env fish
 
-~/.config/hypr/theme.sh
 gjs -m ~/.config/astal/astal.js &
 poweralertd &
 hypridle &
