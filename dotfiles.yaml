@@ -14,7 +14,6 @@
     ~/.config/astal: Configuration/astal
     ~/.config/environment.d: Configuration/environment.d
     ~/.config/fish: Configuration/fish
-    ~/.config/foot: Configuration/foot
     ~/.config/fuzzel: Configuration/fuzzel
     ~/.config/ghostty: Configuration/ghostty
     ~/.config/hypr: Configuration/hypr
