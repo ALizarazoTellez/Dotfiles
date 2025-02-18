@@ -14,14 +14,13 @@
     ~/.config/astal: Configuration/astal
     ~/.config/environment.d: Configuration/environment.d
     ~/.config/fish: Configuration/fish
-    ~/.config/foot: Configuration/foot
     ~/.config/fuzzel: Configuration/fuzzel
+    ~/.config/ghostty: Configuration/ghostty
     ~/.config/gtk-3.0: Configuration/gtk-3.0
     ~/.config/hypr: Configuration/hypr
     ~/.config/mimeapps.list: Configuration/mimeapps.list
     ~/.config/nvim: Submodule/Neovim
     ~/.config/systemd: Configuration/systemd
-    ~/.config/zellij: Configuration/zellij
 
 - create:
   - ~/Documents/Code
