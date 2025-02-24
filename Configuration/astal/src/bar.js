@@ -14,6 +14,7 @@ export function Bar(monitor) {
       setup: (self) => App.add_window(self),
       monitor: monitor,
       anchor: TOP | LEFT | RIGHT,
+      layer: Astal.Layer.OVERLAY,
       className: "Bar",
     },
 

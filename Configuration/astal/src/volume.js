@@ -15,6 +15,7 @@ export function VolumeLevel(monitor) {
       setup: (self) => App.add_window(self),
       monitor: monitor,
       anchor: BOTTOM,
+      layer: Astal.Layer.OVERLAY,
     },
 
     new Widget.Label({
