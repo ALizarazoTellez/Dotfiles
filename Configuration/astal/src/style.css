@@ -1,0 +1,53 @@
+/* Color definitions. */
+
+@define-color base #191724;
+@define-color text #e0def4;
+@define-color muted #6e6a86;
+@define-color foam #9ccfd8;
+@define-color highligh-med #403d52;
+
+.Bar {
+  color: @text;
+  background-color: @base;
+}
+
+.Bar-CenterBox {
+  padding: 5px 10px;
+}
+
+.Bar-CenterBox-Time {
+  font-size: 16px;
+}
+
+.Bar-CenterBox-Workspace {
+  font-size: 16px;
+}
+
+.Bar-CenterBox-SystemStatus-BatteryStatus {
+  margin-left: 8px;
+}
+
+.Bar-CenterBox-SystemStatus-SystemTray-MenuButton {
+  background: @base;
+  box-shadow: none;
+  border: none;
+}
+
+.Bar-CenterBox-SystemStatus-SystemTray-MenuButton {
+  border-radius: 8px;
+  border: 2px solid transparent;
+  padding: 2px 4px;
+  margin-left: 2px;
+}
+
+.Bar-CenterBox-SystemStatus-SystemTray-MenuButton:active {
+  border: 2px solid @foam;
+}
+
+.Bar-CenterBox-SystemStatus-SystemTray-MenuButton:hover {
+  background-color: @highligh-med;
+}
+
+.Bar-CenterBox-SystemStatus-SystemTray-MenuButton-Icon {
+  font-size: 16px;
+}

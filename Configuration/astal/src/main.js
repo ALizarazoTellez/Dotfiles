@@ -4,12 +4,20 @@ import { Bar } from "./bar.js";
 import { VolumeLevel } from "./volume.js";
 import { bind } from "astal";
 
+import GLib from "gi://GLib";
+
 import WirePlumber from "gi://AstalWp";
+
+let astalDir =
+  GLib.getenv("XDG_CONFIG_HOME") ||
+  GLib.build_filenamev([GLib.getenv("HOME"), ".config", "astal"]);
 
 let bar;
 
 App.start({
   instanceName: "status-bar",
+
+  css: GLib.build_filenamev([astalDir, "src", "style.css"]),
 
   requestHandler: (request, response) => {
     if (request === "show") {

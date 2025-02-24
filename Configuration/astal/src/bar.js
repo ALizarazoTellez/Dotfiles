@@ -14,9 +14,17 @@ export function Bar(monitor) {
       setup: (self) => App.add_window(self),
       monitor: monitor,
       anchor: TOP | LEFT | RIGHT,
+      className: "Bar",
     },
 
-    new Widget.CenterBox({}, Workspace(), Time(), SystemStatus()),
+    new Widget.CenterBox(
+      {
+        className: "Bar-CenterBox",
+      },
+      Workspace(),
+      Time(),
+      SystemStatus(),
+    ),
   );
 }
 
@@ -24,7 +32,9 @@ function Workspace() {
   const hyprland = Hyprland.get_default();
 
   return new Widget.Box(
-    {},
+    {
+      className: "Bar-CenterBox-Workspace",
+    },
     bind(hyprland, "focusedWorkspace").as((workspace) => workspace.name),
   );
 }
@@ -35,6 +45,7 @@ function Time() {
   );
 
   return new Widget.Label({
+    className: "Bar-CenterBox-Time",
     label: time((v) => v),
     onDestroy: () => {
       time.drop();
@@ -44,7 +55,7 @@ function Time() {
 
 function SystemStatus() {
   return new Widget.Box(
-    { halign: Gtk.Align.END },
+    { halign: Gtk.Align.END, className: "Bar-CenterBox-SystemStatus" },
     SystemTray(),
     BatteryStatus(),
   );
@@ -54,7 +65,7 @@ function SystemTray() {
   const tray = Tray.get_default();
 
   return new Widget.Box(
-    {},
+    { className: "Bar-CenterBox-SystemStatus-SystemTray" },
     bind(tray, "items").as((items) =>
       items.map(
         (item) =>
@@ -67,8 +78,13 @@ function SystemTray() {
                 ag,
               ]),
               menuModel: bind(item, "menuModel"),
+              className: "Bar-CenterBox-SystemStatus-SystemTray-MenuButton",
             },
-            new Widget.Icon({ gicon: bind(item, "gicon") }),
+            new Widget.Icon({
+              gicon: bind(item, "gicon"),
+              className:
+                "Bar-CenterBox-SystemStatus-SystemTray-MenuButton-Icon",
+            }),
           ),
       ),
     ),
@@ -79,7 +95,7 @@ function BatteryStatus() {
   const battery = Battery.get_default();
 
   return new Widget.Box(
-    {},
+    { className: "Bar-CenterBox-SystemStatus-BatteryStatus" },
     new Widget.Icon({ icon: bind(battery, "batteryIconName") }),
     new Widget.Label({
       label: bind(battery, "percentage").as((p) => ` ${Math.floor(p * 100)}%`),
