@@ -43,12 +43,17 @@ function Time() {
   const time = Variable("").poll(1000, () =>
     GLib.DateTime.new_now_local().format("%H:%M"),
   );
+  const date = Variable("").poll(1000, () =>
+    GLib.DateTime.new_now_local().format("%A, %d %B %Y"),
+  );
 
   return new Widget.Label({
     className: "Bar-CenterBox-Time",
     label: time((v) => v),
+    tooltipText: date((v) => v),
     onDestroy: () => {
       time.drop();
+      date.drop();
     },
   });
 }
