@@ -15,19 +15,19 @@ background-opacity = 0.9
 # I really like the underline cursor.
 shell-integration-features = no-cursor
 
-keybind = alt+a>r=reset
-keybind = alt+a>p=paste_from_clipboard
-keybind = alt+a>y=copy_to_clipboard
-keybind = alt+a>t=new_tab
-keybind = alt+a>n=next_tab
-keybind = alt+a>p=previous_tab
-keybind = alt+a>1=goto_tab:1
-keybind = alt+a>2=goto_tab:2
-keybind = alt+a>m=move_tab:1
-keybind = alt+a>s=new_split:auto
-keybind = alt+a>w=goto_split:next
-keybind = alt+a>c=reload_config
-keybind = alt+a>f=toggle_fullscreen
+keybind = alt+;>r=reset
+keybind = alt+;>p=paste_from_clipboard
+keybind = alt+;>y=copy_to_clipboard
+keybind = alt+;>t=new_tab
+keybind = alt+;>n=next_tab
+keybind = alt+;>p=previous_tab
+keybind = alt+;>1=goto_tab:1
+keybind = alt+;>2=goto_tab:2
+keybind = alt+;>m=move_tab:1
+keybind = alt+;>s=new_split:auto
+keybind = alt+;>w=goto_split:next
+keybind = alt+;>c=reload_config
+keybind = alt+;>f=toggle_fullscreen
 
 keybind = alt+e=scroll_page_lines:-1
 keybind = alt+i=scroll_page_lines:1
