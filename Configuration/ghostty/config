@@ -7,29 +7,98 @@ theme = rose-pine
 font-family = "Iosevka Term"
 font-size = 15
 
-cursor-style = underline
-mouse-hide-while-typing = true
-
 background-opacity = 0.9
 
-# I really like the underline cursor.
+mouse-hide-while-typing = true
+
+# Use the underline cursor in the shell.
+cursor-style = underline
 shell-integration-features = no-cursor
 
+# Keybinds.
+
 keybind = alt+;>r=reset
-keybind = alt+;>p=paste_from_clipboard
-keybind = alt+;>y=copy_to_clipboard
+
+keybind = alt+;>c=copy_to_clipboard
+keybind = alt+;>v=paste_from_clipboard
+
 keybind = alt+;>t=new_tab
-keybind = alt+;>n=next_tab
-keybind = alt+;>p=previous_tab
-keybind = alt+;>1=goto_tab:1
-keybind = alt+;>2=goto_tab:2
 keybind = alt+;>m=move_tab:1
+
 keybind = alt+;>s=new_split:auto
-keybind = alt+;>w=goto_split:next
-keybind = alt+;>c=reload_config
+keybind = alt+space=goto_split:next
+
+keybind = alt+;>/=reload_config
 keybind = alt+;>f=toggle_fullscreen
 
+# On a Coolemak keyboard:
+# N E I O
+# ← ↑ → ↓
+keybind = alt+n=previous_tab
 keybind = alt+e=scroll_page_lines:-1
-keybind = alt+i=scroll_page_lines:1
+keybind = alt+i=next_tab
+keybind = alt+o=scroll_page_lines:1
+
+# Unbind default keybinds.
+# Except the `ALT+NUMBER` combinations.
+keybind = super+ctrl+shift+plus=unbind
+keybind = super+ctrl+shift+up=unbind
+keybind = super+ctrl+shift+down=unbind
+keybind = super+ctrl+shift+right=unbind
+keybind = super+ctrl+shift+left=unbind
+keybind = ctrl+alt+shift+j=unbind
+keybind = super+ctrl+left_bracket=unbind
+keybind = super+ctrl+right_bracket=unbind
+keybind = ctrl+alt+up=unbind
+keybind = ctrl+alt+down=unbind
+keybind = ctrl+alt+right=unbind
+keybind = ctrl+alt+left=unbind
+keybind = ctrl+shift+a=unbind
+keybind = ctrl+shift+c=unbind
+keybind = ctrl+shift+e=unbind
+keybind = ctrl+shift+i=unbind
+keybind = ctrl+shift+j=unbind
+keybind = ctrl+shift+n=unbind
+keybind = ctrl+shift+o=unbind
+keybind = ctrl+shift+q=unbind
+keybind = ctrl+shift+t=unbind
+keybind = ctrl+shift+v=unbind
+keybind = ctrl+shift+w=unbind
+keybind = ctrl+shift+comma=unbind
+keybind = ctrl+shift+right=unbind
+keybind = ctrl+shift+left=unbind
+keybind = ctrl+shift+page_up=unbind
+keybind = ctrl+shift+page_down=unbind
+keybind = ctrl+shift+enter=unbind
+keybind = ctrl+shift+tab=unbind
+#keybind = alt+one=unbind
+#keybind = alt+two=unbind
+#keybind = alt+three=unbind
+#keybind = alt+four=unbind
+#keybind = alt+five=unbind
+#keybind = alt+six=unbind
+#keybind = alt+seven=unbind
+#keybind = alt+eight=unbind
+#keybind = alt+nine=unbind
+keybind = alt+f4=unbind
+keybind = ctrl+zero=unbind
+keybind = ctrl+comma=unbind
+keybind = ctrl+minus=unbind
+keybind = ctrl+plus=unbind
+keybind = ctrl+equal=unbind
+keybind = ctrl+insert=unbind
+keybind = ctrl+page_up=unbind
+keybind = ctrl+page_down=unbind
+keybind = ctrl+enter=unbind
+keybind = ctrl+tab=unbind
+keybind = shift+up=unbind
+keybind = shift+down=unbind
+keybind = shift+right=unbind
+keybind = shift+left=unbind
+keybind = shift+home=unbind
+keybind = shift+end=unbind
+keybind = shift+insert=unbind
+keybind = shift+page_up=unbind
+keybind = shift+page_down=unbind
 
 # vim: filetype=conf
