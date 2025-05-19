@@ -26,7 +26,6 @@ keybind = alt+;>t=new_tab
 keybind = alt+;>m=move_tab:1
 
 keybind = alt+;>s=new_split:auto
-keybind = alt+space=goto_split:next
 
 keybind = alt+;>/=reload_config
 keybind = alt+;>f=toggle_fullscreen
@@ -34,10 +33,19 @@ keybind = alt+;>f=toggle_fullscreen
 # On a Coolemak keyboard:
 # N E I O
 # ← ↑ → ↓
-keybind = alt+n=previous_tab
-keybind = alt+e=scroll_page_lines:-1
-keybind = alt+i=next_tab
-keybind = alt+o=scroll_page_lines:1
+keybind = alt+;>e=scroll_to_top
+keybind = alt+;>o=scroll_to_bottom
+
+keybind = alt+h=scroll_page_lines:-1
+
+keybind = alt+shift+e=scroll_page_up
+keybind = alt+shift+o=scroll_page_down
+
+keybind = alt+u=goto_split:next
+keybind = alt+n=goto_tab:1
+keybind = alt+e=goto_tab:2
+keybind = alt+i=goto_tab:3
+keybind = alt+o=goto_tab:4
 
 # Unbind default keybinds.
 # Except the `ALT+NUMBER` combinations.
