@@ -1,6 +1,7 @@
 import { App } from "astal/gtk3";
 
 import { Bar } from "./bar.js";
+import { Mode } from "./mode.js";
 import { VolumeLevel } from "./volume.js";
 import { bind } from "astal";
 
@@ -13,6 +14,7 @@ let astalDir =
   GLib.build_filenamev([GLib.getenv("HOME"), ".config", "astal"]);
 
 let bar;
+let mode;
 
 App.start({
   instanceName: "status-bar",
@@ -20,13 +22,23 @@ App.start({
   css: GLib.build_filenamev([astalDir, "src", "style.css"]),
 
   requestHandler: (request, response) => {
-    if (request === "show") {
+    if (request === "show-bar") {
       bar.visible = true;
       return response("show...");
     }
 
-    if (request === "hide") {
+    if (request === "hide-bar") {
       bar.visible = false;
+      return response("hide...");
+    }
+
+    if (request === "show-mode") {
+      mode.visible = true;
+      return response("show...");
+    }
+
+    if (request === "hide-mode") {
+      mode.visible = false;
       return response("hide...");
     }
   },
@@ -34,6 +46,9 @@ App.start({
   main() {
     bar = Bar(0);
     bar.visible = false;
+
+    mode = Mode(0);
+    mode.visible = false;
 
     let volumeLevel = VolumeLevel(0);
     volumeLevel.visible = false;

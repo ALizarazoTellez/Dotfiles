@@ -19,6 +19,18 @@ func main() {
 		log.Print("Toggling gamemode...")
 		ToggleGamemode()
 	}
+
+	if os.Args[1] == "show-mode" {
+		if err := exec.Command("astal", "-i", "status-bar", "show-mode").Run(); err != nil {
+			panic(err)
+		}
+	}
+
+	if os.Args[1] == "hide-mode" {
+		if err := exec.Command("astal", "-i", "status-bar", "hide-mode").Run(); err != nil {
+			panic(err)
+		}
+	}
 }
 
 func registerHandlers() {
@@ -30,14 +42,14 @@ func registerHandlers() {
 
 		// Data{Workspace, Monitor}.
 		if data[0] == "special:Scratchpad" {
-			if err := exec.Command("astal", "-i", "status-bar", "show").Run(); err != nil {
+			if err := exec.Command("astal", "-i", "status-bar", "show-bar").Run(); err != nil {
 				return err
 			}
 
 			return nil
 		}
 
-		if err := exec.Command("astal", "-i", "status-bar", "hide").Run(); err != nil {
+		if err := exec.Command("astal", "-i", "status-bar", "hide-bar").Run(); err != nil {
 			return err
 		}
 
